@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+#nav {
+    display: flex;
+    top: 0;
+    background: black;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#header a {
+    text-decoration: none;
+    color: black;
+    color: white;
+    padding: 1em 1.2em;
+}
+
+#header a:hover {
+    color: lime;
+}
+
+#about {
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pic {
+    border-radius: 50%; 
+    height: 7em;
+    width: 7em;
+    background-size: 7em;
+    background-image: url(../images/0.jpeg);
+    background-repeat: none;
+    background-position: center;
+    
+}
+
+.title {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 1.5em;
+}
+
+.sub-text {
+    width: 80%;
+}
