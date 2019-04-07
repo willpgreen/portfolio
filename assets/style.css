@@ -2,53 +2,380 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1em;
+    font-family: proxima-nova, sans-serif;
 }
 
 #nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     top: 0;
-    background: black;
+    background:rgb(25, 25, 25);
     justify-content: center;
     margin: 0 auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
 }
 
 #header a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
     color: white;
-    padding: 1em 1.2em;
+    padding: 1em 4em;
 }
 
 #header a:hover {
-    color: lime;
+    color: #C3E0CD;
+}
+
+#intro-container {
+    margin-top: 3em;
+    width: 100%;
+    height: auto;
+    background-color: rbga(255, 0, 0, 0.5);
+    padding-bottom: 18.5%;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url("images/Headerimg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#name {
+    color: white;
+    vertical-align: middle;
+    padding-top: 10%;
+    font-size: 4em;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+#intro {
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding-top: 3%;
+    font-size: 1.1em;
+}
+
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 33px repeat(3, 1fr);
+    grid-row-gap: 5em;
+    margin: 0;
+    padding-top: 90px;
+}
+
+#project-title {
+    grid-column: 3;
+    justify-self: center;
+    font-weight: 700;
+    font-style: normal;
+    padding: none;
+}
+
+.project-name {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3em;
+    margin: 1.2em;
+}
+
+.project-name:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /* margin: 0 auto; This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid #C3E0CD; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.project-description {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    margin: 1.2em;
+    margin-bottom: 2.4em;
+}
+
+.project-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-picture:hover {
+    transition: 0.5s;
+    background-color: #2F6542;
+    background-blend-mode: multiply;
+}
+
+.visible {
+    transition: .7s;
+    visibility: visible;
+    color: white;
+    font-size: 2.5em;
+    padding: .5em;
+}
+
+.pic-icon {
+    color: white;
+    font-size: 2.5em;
+    padding: .5em;
+    visibility: hidden;
+}
+
+.visible:hover {
+    transition: 0;
+    color:rgb(134, 196, 156);
+}
+
+#project-background1 {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+    box-shadow: 0px 9px 26px rgba(0, 0, 0, 0.16);
+}
+
+#project-background2 {
+    grid-row: 3;
+    grid-column: 2 / span 3;
+    box-shadow: 0px 9px 26px rgba(0, 0, 0, 0.16);
+}
+
+#project-background3 {
+    grid-row: 4;
+    grid-column: 2 / span 3;
+    box-shadow: 0px 9px 26px rgba(0, 0, 0, 0.16);
+}
+
+#project-pic1 {
+    grid-row: 2;
+    grid-column: 2;
+    background-image: url("images/component.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project-text1 {
+    grid-row: 2;
+    grid-column: 3 / span 2;
+}
+
+#project-pic2 {
+    grid-row: 3;
+    grid-column: 4;
+    background-image: url("images/Headerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project-text2 {
+    grid-row: 3;
+    grid-column: 2 / span 2;
+}
+
+#project-pic3 {
+    grid-row: 4;
+    grid-column: 2;
+    background-image: url("images/calculator.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project-text3 {
+    grid-row: 4;
+    grid-column: 3 / span 2;
+}
+
+#additional-projects {
+    text-align: center;
+    margin-top: 90px;
+    background: #F2F2F2;
+    
+}
+
+#additional-projects-title {
+    padding: 45px;
+}
+
+#add-proj-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.add-proj {
+    padding: 40px;
+    margin: 20px;
+}
+
+#add-proj1 {
+    background-image: url("images/eas.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#add-proj2 {
+    background-image: url("images/component.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#add-proj3 {
+    background-image: url("images/component.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#add-proj4 {
+    background-image: url("images/component.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #about {
     display: flex;
-    margin-top: 2em;
+    padding-top: 90px;
     flex-direction: column;
     align-items: center;
 }
 
-#pic {
-    border-radius: 50%; 
-    height: 7em;
-    width: 7em;
-    background-size: 7em;
-    background-image: url(../images/0.jpeg);
-    background-repeat: none;
-    background-position: center;
-    
-}
-
 .title {
     font-size: 1.3em;
-    font-weight: bold;
-    padding: 1.5em;
+    font-weight: 700;
+    /* padding: 1.5em; */
 }
 
 .sub-text {
-    width: 80%;
+    margin-top: 2em;
+    width: 60%;
 }
+
+/* #contact {
+    display: flex;
+    margin-top: 90px;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2F2F2;
+}
+
+#form-text {
+    background-color: #C3E0CD;
+} */
+
+#contact-me {
+    margin-top: 90px;
+    background: #F2F2F2;
+    padding-bottom: 30px;
+}
+.container {
+	max-width:500px;
+	width:60%;
+	margin:0 auto;
+    position:relative;
+    padding: none;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px proxima-nova, sans-serif; }
+
+#contact {
+	margin:50px 0;
+}
+
+#contact h3 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+    resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:105%;
+	border:none;
+	background:#2F6556;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+    font-size:15px;
+    
+}
+
+#contact button[type="submit"]:hover {
+	background:rgb(134, 196, 156);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+#separate {
+    border-top: 1px solid #C3E0CD;
+    position: relative;
+    width: 175%;
+    margin-left: -35%;
+    margin-top: 100px;
+}
+
+#footer{
+    /* border-top: 1px solid #C3E0CD; */
+    justify-content: center;
+    display: flex;
+    padding-top: 40px;
+}
+
+
