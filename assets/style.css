@@ -40,14 +40,14 @@ html, body {
     vertical-align: middle;
     background-image: url("images/Headerimg.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 #name {
     color: white;
     vertical-align: middle;
     padding-top: 10%;
-    font-size: 4em;
+    font-size: 5em;
     font-weight: 300;
     font-style: normal;
 } 
@@ -57,7 +57,9 @@ html, body {
     font-style: normal;
     color: white;
     padding-top: 3%;
-    font-size: 1.1em;
+    font-size: 1.5em;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #project-container {
@@ -81,7 +83,7 @@ html, body {
     font-weight: 700;
     font-style: normal;
     font-size: 1.3em;
-    margin: 1.8em 2.4em 0 2.4em;
+    margin: 1.8em 2.4em 0 2em;
 }
 
 .project-name:after {
@@ -96,8 +98,8 @@ html, body {
 .project-description {
     font-weight: 400;
     font-style: normal;
-    font-size: 1.1em;
-    margin: 1.2em 2.4em 2.4em 1.8em;
+    font-size: 1em;
+    margin: 1.2em 2.4em 2.4em 2.4em;
     /* margin-bottom: 2.4em; */
     line-height: 130%;
 }
@@ -155,9 +157,10 @@ html, body {
 #project-pic1 {
     grid-row: 2;
     grid-column: 2;
-    background-image: url("images/component.png");
+    background-image: url("images/mine.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
 }
 
 #project-text1 {
@@ -168,7 +171,7 @@ html, body {
 #project-pic2 {
     grid-row: 3;
     grid-column: 4;
-    background-image: url("images/Headerimg.png");
+    background-image: url("images/calculator.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -181,7 +184,7 @@ html, body {
 #project-pic3 {
     grid-row: 4;
     grid-column: 2;
-    background-image: url("images/calculator.jpeg");
+    background-image: url("images/mandel1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -210,32 +213,53 @@ html, body {
 }
 
 .add-proj {
-    padding: 40px;
-    margin: 20px;
+    padding: 20px;
+    margin: 0 2em;
 }
 
+/* Etch A Sketch*/
 #add-proj1 {
     background-image: url("images/eas.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    width: 10em;
+    height: 10em;
+    background-size: cover;
 }
 
+/* CS50 */
 #add-proj2 {
-    background-image: url("images/component.png");
+    background-image: url("images/dollar.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 10em;
+    height: 10em;
 }
 
+/* Mint */
 #add-proj3 {
-    background-image: url("images/component.png");
+    background-image: url("images/mint.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 10em;
+    height: 10em;
 }
 
+/* Apple */
 #add-proj4 {
-    background-image: url("images/component.png");
+    background-image: url("images/Apple-icon.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 10em;
+    height: 10em;
+}
+
+/* Google */
+#add-proj5 {
+    background-image: url("images/google.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10em;
+    height: 10em;
 }
 
 #about {
@@ -256,8 +280,10 @@ html, body {
 }
 
 .sub-text {
+    text-align: center;
     margin-top: 2em;
     width: 60%;
+    max-width: 800px;
 }
 
  #contact {
